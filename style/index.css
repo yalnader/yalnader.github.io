@@ -1,0 +1,48 @@
+html {
+    max-height: 1000%;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(to bottom, rgba(57,204,204,1) 0%, rgba(34,122,122,1) 100%);
+    background-repeat: no-repeat;
+    color: rgba(0,0,0,.7);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+div.polaroid {
+    width: 600px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+}
+
+a{
+    color: rgba(0,0,0,.7);
+}
+
+a:hover{
+    color:#efb84d
+}
+.radio-list{
+    display: inline-block; 
+    text-align: left;
+}
+
+textarea{
+    width: 500px;
+    height: 150px;
+}
+
+form.p{
+    font-weight: 900;
+}
+
