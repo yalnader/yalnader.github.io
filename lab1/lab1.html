@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasser's survey</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" type="text/css" href="lab1.css">
+</head>
+<body class="bg-maroon-gradient">
+    <div class="main">
+        <h1>Lab 1</h1>
+        <p>
+            The Website I picked to create my survey on is CBC. You can reach
+            the CBC website by clicking <a target="about_" href="https://www.cbc.ca/">here</a>
+            or on the image below 
+        </p>
+        <div class="center polaroid">
+            <a target="about_" href="https://www.cbc.ca/"> 
+                <img  target="about_" src="../img/cbcPic.PNG" width="600" height="500">
+            </a>
+        </div>
+        
+        <br>
+        <br>
+        <h3>Survey</h3>
+        <div class="survey">
+            <form>
+                <p>
+                    q1. What is something which is done well by the UI of this this website?
+                </p>
+                <input type="text" name="q1" id="What is something which is done well on this UI?">
+                <br>
+                <br>
+                <p>
+                    q2. What are some places the UI can imporve?
+                </p>
+                <div class="radio-list">
+                    <input type="radio" name="q2" id="The UI is too bland">
+                    <label for="The UI is too bland">The UI is too bland</label><br>
+                    <input type="radio" name="q2" id="The UI is not efficient">
+                    <label for="The UI is not efficient">The UI is not efficient</label><br>
+                    <input type="radio" name="q2" id="The UI is incoherent">
+                    <label for="The UI is incoherent">The UI is incoherent</label><br>
+                    <input type="radio" name="q2" id="The UI is inconsistent">
+                    <label for="The UI is inconsistent">The UI is inconsistent</label><br>
+                </div>
+                <p>
+                    q3. What UI has this website achived?
+                </p>
+                <div class="radio-list">
+                    <input type="checkbox" name="q3" id="Usability">
+                    <label for="Usability">Usability</label><br>
+                    <input type="checkbox" name="q3" id="Consistency">
+                    <label for="Consistency">Consistency</label><br>
+                    <input type="checkbox" name="q3" id="Security">
+                    <label for="Security">Security</label><br>
+                    <input type="checkbox" name="q3" id="Functionality">
+                    <label for="Functionality">Functionality</label><br>
+                    <input type="checkbox" name="q3" id="other">
+                    <label for="other">other: </label>
+                    <input type="text" name="q3" id="other">
+                </div>
+                <p>
+                    q4. Seeing as the website is mostly black and white, what color changes would <br> you make to the UI in order to make it more appealing?
+                </p>
+                <label for="colors">Choose a color option: </label>
+                <select name="colors">
+                    <option value="ro">Red and Orange</option>
+                    <option value="gb">Green and Blue</option>
+                    <option value="py">Purple and Yellow</option>
+                    <option value="nc">No Change needed</option>
+                </select>
+                <br><br><br><br>
+                <p>
+                    q5. How satisfied are you with CBC's website?
+                    <br>
+                    0 (very dissatisfied) to 10 (very satisfied)
+                </p>
+                <label for="satisfaction">Value: <span id = "myValue"></span></label><br>
+                <input id="slider" type="range" name="satisfaction" min="0" max="10" value="5">
+                <br>
+                <br>
+
+                <label for="comments">You can enter any addtional comments below</label><br><br>
+                <textarea name="comments"></textarea><br>
+                <input type="submit" value="Submit Survey">
+            </form>
+        </div>
+    </div>
+
+    <br>
+
+    <footer>
+        <p>Website Desgined By <a href="mailto:yasseralnader@gmail.com">Yasser Alnader</a>
+        </p>
+    </footer>
+</body>
+<script>
+    var slider = document.getElementById("slider");
+    var output = document.getElementById("myValue");
+    output.innerHTML = 5
+    slider.oninput = function() {
+        output.innerHTML = this.value
+    }
+</script>
+</html>

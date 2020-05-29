@@ -49,8 +49,3 @@ form.p{
 ul { display: inline-block; text-align: left; }
 li {list-style-type: none;}
 
-footer {
-    bottom: 0;
-    width: 99%;
-    position: absolute;
-}
