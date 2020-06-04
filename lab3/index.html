@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasser's Groceries</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+    
+    <h1>Yasser's Groceries</h1>
+    <br>
+    <h2>Get your groceries fast and easy using our website</h2>
+    <br> <br> 
+    <h2>Groceries Preferences</h2>
+    <h3>1. Do you have a preference of groceries you'd like to see?</h3>
+    <div class="preference">
+        <input type="checkbox" name="preference" value="organic"> Organic
+        <input type="checkbox" name="preference" value="vegetarian"> Vegetarian
+        <input type="checkbox" name="preference" value="halal"> Halal
+        <input type="checkbox" name="preference" value="glutenFree"> Gluten-Free
+    </div>
+    <br>
+    <br>
+
+    <h3>You can Select one of the Cataegories to narrow down the search</h3>
+    <div class="preference">
+        <input type="radio" name="categorization" value="fruit"> Fruits <br>
+        <input type="radio" name="categorization" value="vegetable"> Vegetables <br>
+        <input type="radio" name="categorization" value="dairy"> Dairy Products <br>
+        <input type="radio" name="categorization" value="beverages"> Beverages <br>
+        <input type="radio" name="categorization" value="cookingProducts"> Cooking Products <br>
+        <input type="radio" name="categorization" value="noAdditional" checked="checked"> No Additional Filter <br>
+    </div>
+    <br>
+    <br>
+
+    <button id="search" class="button">Search Groceries</button>
+    <br>
+    <br>
+    <h2>Search Results</h2>
+    <h3>2. Here the filitered down results, choose what you'd like to add to your cart</h3>
+
+    <div id="productChoices" class="grid"></div>
+
+    <br> <br>
+
+    <button id="addCart" class="button">Add Choices to my Cart</button>
+
+    <h2>Cart</h2>
+    <h3>View the contents of your cart below</h3>
+    <p>Selected Items:</p>
+    <div id="cart" class="grid"></div>
+
+    <script src="scripts/index.js"></script>
+
+    <br><br><br><br>
+    <footer>
+        <p>Website Desgined By <a href="mailto:yasseralnader@gmail.com">Yasser Alnader</a>
+        </p>
+    </footer>
+</body>
+</html>
+
+<!-- 
+
+    add cart view, with prices?
+    add total price at the bottom
+    make it look nice with css
+
+ -->

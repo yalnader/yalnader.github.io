@@ -1,0 +1,62 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font-size: 3rem;
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+}
+.grid input{
+    display: inline-block;
+    text-align: left;
+}
+.grid label{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: large;
+}
+.grid img{
+    display: inline;
+    vertical-align: middle;
+}
+footer {
+    text-align: center;
+    bottom: 0;
+    width: 99%;
+    position: relative;
+}
+.preference{
+ text-align: center;
+ font-size: 1.5rem;
+ display: inline-block;
+    text-align: left;
+}
+/* code inspired by https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_color */
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+#productChoices{
+    /* margin-left: auto;
+    margin-right: auto;
+    width: 200; */
+    display: inline-block;
+    text-align: left;
+}
