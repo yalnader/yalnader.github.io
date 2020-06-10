@@ -1,5 +1,4 @@
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
@@ -54,9 +53,6 @@ footer {
   }
 
 #productChoices{
-    /* margin-left: auto;
-    margin-right: auto;
-    width: 200; */
     display: inline-block;
     text-align: left;
 }

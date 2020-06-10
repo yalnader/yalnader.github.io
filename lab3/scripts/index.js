@@ -209,13 +209,6 @@ function getSelectedCheckboxValues(name) {
     return values;
 }
 
-// function emptyDiv(id){
-//     div = document.getElementById(id);
-//     if(id.innerHTML == ""){
-//         var p = document.createElement('p')
-//         p.innerHTML = "There is Nothing here"
-//     }
-// }
 
 const searchBtn = document.querySelector('#search');
 searchBtn.addEventListener('click', (event) => {
