@@ -1,3 +1,13 @@
 body{
     margin-bottom: 40px;
 }
+
+.error {
+    background-color: yellow;
+    color : red;
+  }
+  /* inspired by  https://stackoverflow.com/questions/22545325/how-to-vertically-align-text-with-icon-font */
+.parent-element {
+    display: flex;
+    align-items: center;
+  }

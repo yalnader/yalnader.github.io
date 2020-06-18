@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+    
+    <script src="./scripts/script.js"></script>  
 
     <!-- Your own additional style sheet -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
@@ -26,6 +28,29 @@
 
 
 <body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Yasser's Barber Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#about"><img src="https://img.icons8.com/plasticine/100/000000/information.png" alt="logo" style="width:30px;">About Us</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="#services"><img src="https://img.icons8.com/plasticine/100/000000/barber-chair.png" alt="logo" style="width:30px;">Our Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#book"><img src="https://img.icons8.com/plasticine/100/000000/calendar.png" alt="logo" style="width:30px;">Book Appointment</a>
+            </li>  
+            <li class="nav-item">
+                <a class="nav-link" href="#hair"><img src="https://img.icons8.com/dusk/64/000000/barber-pole.png" alt="logo" style="width:30px;">Our Hair Dressers</a>
+            </li>  
+         </ul>
+        </div>  
+      </nav>
 
     <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
     <!-- Should show the name of your company with an image or logo -->
@@ -48,8 +73,11 @@
     </div> -->
 
     <!-- When you have messages to tell, remember that center align is not always the best choice -->
-    <div class="container-md p-3 my-3 border bg-dark text-white">
-        <h3>About Us</h3>
+    <div class="container-md p-3 my-3  text-dark " id="about">
+        <div class="clearfix content-heading">
+            <span class="parent-element"> <img width="50px" height="50px" src="https://img.icons8.com/plasticine/100/000000/information.png"/>  
+                <h2>About Us</h2></span>
+        </div>
         <p>We are a family run business in Ottawa, Ontario. 
             We've been keeping our neighbourhoods
             fresh with hair cuts for the past 20 years and coutning.
@@ -65,9 +93,15 @@
 
     <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
     <!-- Might be (or not) useful to show some information to the user -->
-    <div class="container">
-        <h2>Our Services</h2>
-        <p>Here is a list of services offered</p>            
+    <div class="container" id="services">
+
+        <div class="clearfix content-heading">
+            <span class="parent-element"> <img width="50px" height="50px" src="https://img.icons8.com/plasticine/100/000000/barber-chair.png"/>  
+                <h2>Our Services</h2></span>
+        </div>
+
+        <p>Here is a list of services offered</p> 
+                   
         <table class="table  table-hover">
             <thead>
             <tr>
@@ -85,35 +119,12 @@
                 <td>$20</td>
             </tr>
             <tr>
-                <td>Hairbut & Beard Line-up</td>
+                <td>Haircut & Beard Line-up</td>
                 <td>$35</td>
             </tr>
             </tbody>
         </table>
     </div>
-
-
-    <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
-    <!-- These can be useful for making sure someone reads something before continuing -->
-    <!-- <div class="container">
-        <h2>Alert</h2>
-        <p>We have something important to say</p>
-        <div class="alert alert-danger alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Please read! </strong>You must read.
-        </div>
-    </div> -->
-
-    <!-- You'll certainly need buttons at some point in your site -->
-    <!-- https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp -->
-    <!-- Remember how we talked about choosing a hue and changing the saturation for active/inactive -->
-    <!-- This idea is already part of the components in Bootstrap -->
-    <!-- <div class="container">
-        <h2>Button States</h2>
-        <button type="button" class="btn btn-warning">Primary Button</button>
-        <button type="button" class="btn btn-warning active">Active Primary</button>
-        <button type="button" class="btn btn-warning" disabled>Disabled Primary</button>
-    </div> -->
 
     
 
@@ -121,8 +132,13 @@
     <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
     <!-- Modals are useful for additional information or questions -->
     <!-- Here the modal is used for a little survey -->
-    <div class="container">
-        <h2>Book a Appointment</h2>
+    <div class="container" id="book">
+
+        <div class="clearfix content-heading">
+            <span class="parent-element"><img width="50px" height="50px" src="https://img.icons8.com/plasticine/100/000000/calendar.png"/>    
+            <h2>Book a Appointment</h2></span>
+        </div>
+        <br>
         <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#mySurvey">Make a Booking</button>
           
@@ -140,16 +156,41 @@
                         <p>Please fill in the form</p>
                         <form>
                           
-                            <label>Name: <input type="text" value=""></label>
+                            <label>Name: <input id="name" type="text" value=""></label><br>
 
-                            <label>Email: <input type="text" value=""></label>
+                            <label>Phone: <input id  = "phoneNumber" type="text" value="" placeholder="(XXX)-XXX-XXXX"></label><br>
 
-                            <label>What Date: <input type="date" value=""></label>
+                            <label>Choose Hair Dresser:</label>
+
+                            <select name="hairDresser" >
+                                <option value="rob">Rob</option>
+                                <option value="jerry">Jerry</option>
+                            </select>
+                            
+                            <br>
+
+                            <label>Choose Service:</label>
+
+                            <select name="hairDresser" >
+                                <option value="hairCut">Hair Cut</option>
+                                <option value="beardLine">Beard Line-up	</option>
+                                <option value="hairBeard">Hairbut & Beard Line-up	</option>
+
+                            </select>
+
+                            <br>
+
+                            <label>What Date: <input id="dateBook" type="date" value=""></label><br>
                           
-                            <label>What Time: <input type="time" value=""></label>
+                            <label>What Time: <input id="timeBook" type="time" value=""></label> <br>
+
+                            <label>Credit Card #: <input id  = "cardNumber" type="text" value="" placeholder="XXXX XXXX XXXX XXXX"
+                                data-toggle="popover" data-content="Asking for the credit card to gaurentee booking, in case of a 
+                                missed appointment your card will be charged $10"
+                                ></label>
                           
                         </form>
-                       <button type="button" class="btn btn-dark" data-dismiss="modal"> Book Appointment</button>
+                       <button id="booked" type="button" class="btn btn-dark" > Book Appointment</button>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -160,7 +201,7 @@
         </div>    
     </div>
 
-
+    <br>
 
     <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
     <!-- Card columns allows multiple cards next to each other -->
@@ -169,8 +210,15 @@
     <!-- https://i.pinimg.com/originals/94/f1/e8/94f1e838df82aa0a73ed8adcd4aaa1ba.jpg -->
     <!-- https://static1.bigstockphoto.com/7/0/3/large1500/307077970.jpg -->
     <!-- https://newcastlebeach.org/images/free-of-old-fashioned-barber-shop-17.jpg -->
-    <div class="container p-3">
-        <h2>Meet our hairdressers</h2>
+    <div class="container p-3" id="hair">
+        
+        <div class="clearfix content-heading">
+            <!-- <img src="https://img.icons8.com/plasticine/100/000000/barber-pole.png"/> -->
+            <!-- <img src="https://img.icons8.com/dusk/64/000000/barber-pole.png"/> -->
+            <span class="parent-element"><img width="50px" height="50px" src="https://img.icons8.com/dusk/64/000000/barber-pole.png"/>    
+            <h2>Meet our hairdressers</h2></span>
+        </div>
+        <br>
         <div class="card-columns">
             <div class="card bg-dark" style="width:200px">
                 <img class="card-img-top" src="images/barber1.jpg" alt="Card image" style="width:100%">
@@ -202,77 +250,10 @@
             </div>
         </div>
     </div>
-
-
-
-
-    <!-- A different approach would be to make the whole staff information collapsible -->
-    <!-- Here a block button (taking the full width) opens/closes the collapsible -->
-    <!-- Here a single card is used, but card columns could be used -->
-    <!-- <div class="container">
-        <h2>More information</h2>
-        <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Meet our mechanics</a>
-        <div id="mechanics" class="collapse">
-            <div class="card bg-warning" style="width:200px">
-                <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Erwind</h4>
-                    <p class="card-text">Erwind knows all about bikes.</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- Collapsible with multiple items - accordion -->
-    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
-    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
-    <!-- could work well.  You can use other patterns too.  This is just an example. -->
-    <!-- <div class="container">
-        <div class="container-md p-3 my-3 border bg-warning text-white">
-            <h1>Erwind's and friends bike shop</h1>
-            <p>Bike fixing is our business</p>
-        </div>
-        <div id="accordion">
-            <div class="card">
-                <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
-                </div>
-                <div id="collapseService" class="collapse show" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>Here is our list of services</p>
-                    </div>
-                </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
-                </div>
-                <div id="collapseDate" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>What date?</p> -->
-                        <!-- Bootstrap has various input components. Some examples are given here: -->
-                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
-                        <!-- <div class="form-group row">
-                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
-                            <div class="col-10">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
-                </div>
-                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>Your information so we can contact you</p>
-                        <p>Form to enter name, email, phone</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
+    <a href="https://icons8.com/icon/RRVWu5uuQ2u9/barber-pole">Barber Pole icon by Icons8</a>
+    <a href="https://icons8.com/icon/67337/calendar">Calendar icon by Icons8</a>
+    <a href="https://icons8.com/icon/PE2ccwdZI9XJ/barber-chair">Barber Chair icon by Icons8</a>
+    <a href="https://icons8.com/icon/103188/information">Information icon by Icons8</a>
+    <a href="https://icons8.com/icon/-2Hc6YJci9jV/barber-pole">Barber Pole icon by Icons8</a>
 </body>
 </html>
