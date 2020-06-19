@@ -41,15 +41,22 @@ function validateCard(txtCard) {
 // Document of datepicker is here: https://api.jqueryui.com/datepicker/ 
 // The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
 // Make sure in your version that you associate Days to remove with Experts (e.g. John doesn't work Mondays)
-var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"]
+var unavailableDatesRob = ["06/29/2020","06/20/2020","07/01/2020", "07/10/2020"]
+var unavailableDatesJerry = ["06/27/2020","07/01/2020","07/17/2020"]
 const setDateFormat = "mm/dd/yy";
 
 function disableDates(date) {
     // Sunday is Day 0, disable all Sundays
-    if (date.getDay() == 0)
-        return [false];
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) == -1 ]
+    
+    if (document.getElementById("selecter").value == "rob"){
+        var string = jQuery.datepicker.formatDate(setDateFormat, date);
+        return [ unavailableDatesRob.indexOf(string) == -1 ]
+    }  else{
+        var string = jQuery.datepicker.formatDate(setDateFormat, date);
+        return [ unavailableDatesJerry.indexOf(string) == -1 ]
+    }  
+    
+    
 }
 
 
@@ -110,7 +117,8 @@ $(document).ready(function(){
 
     // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/ 
     // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/ 
-    $( "#dateInput" ).datepicker(
+    
+    $("#dateBook" ).datepicker(
         {
             dateFormat: setDateFormat,
             // no calendar before June 1rst 2020
