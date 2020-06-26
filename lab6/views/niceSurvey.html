@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  </head>
+  
+  <body>
+	
+	<div class="container-md  my-3  bg-light text-dark" id="survey">
+    <h1 class="display-2 text-center">Survey</h1>
+    <form>
+      <h2 class="font-weight-normal lead "> What fruits(s) do you like? </h2>
+      I like:<br>
+      <input class="form-group" type="text" name="fruit" placeholder="fruit name..." required />
+      <br>
+      <br>
+      <h2 class="font-weight-normal lead"> What color(s) do you like? </h2>
+	    I like:<br>
+		  <input type="checkbox" name="color" value="Red"> Red<br>
+		  <input type="checkbox" name="color" value="Green"> Green<br>
+      <input type="checkbox" name="color" value="Blue"> Blue<br>
+      <br>
+      <h2 class="font-weight-normal lead">What is your favorite animal?</h2>
+      I like:<br>
+      <select class="form-group" name="animal">
+			  <option value="Cat" selected="selected">Cat</option>
+			  <option value="Dog">Dog</option>
+			  <option value="Turtle">Turtle</option>
+      </select>
+      <br>
+      <h2 class="font-weight-normal lead">What is your favorite snacks?</h2>
+      I like: <br>
+      <input class="form-group" name="snack" type="radio" value="Granola Bar"> Granola Bars <br>
+      <input class="form-group" name="snack" type="radio" value="Oatmeal Cookie"> Oatmeal cookies <br>
+      <input class="form-group" name="snack" type="radio" value="Fruit by The Foot"> Fruit by the foot <br>
+      <br>
+      <h2 class="font-weight-normal lead">What is your favorite number?</h2>
+      I like: <br>
+      <input class="form-group lead" required name="num" type="number" > <br>
+      <br>
+      <h2 class="font-weight-normal lead">When is your Birth Day?</h2>
+      My Birthday is: <br>
+      <input class="form-group" required name="birth" type="date" > <br>
+      <br>
+
+      <br>
+      <button type="submit" class="btn btn-success" id="bb">Submit</button>
+      <p id="thanks"></p>
+    </form>
+    </div>
+	<script src="/assets/action.js"></script>
+  </body>
+</html> 
